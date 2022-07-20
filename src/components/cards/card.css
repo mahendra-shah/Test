@@ -1,0 +1,54 @@
+.card-parent {
+    width: 60vw;
+    margin: 1rem 19% 1rem 19%;
+    border: 2px solid black;
+    border-radius: 10px 10px 0 10px;
+    border-style: groove;
+       
+}
+
+.card-container{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-title{
+    /* font-size: 1.5rem; */
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+
+}
+
+.card-image img {
+    width: 60vw;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+
+}
+
+.card-content{
+    margin: 10px 10px;
+
+}
+
+.react-box{
+    display: flex;
+}
+
+.react-btn{
+    padding-left: .5rem;
+    padding-bottom: 10px;
+}
+.react-btn button{
+    height: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+
