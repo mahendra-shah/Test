@@ -8,8 +8,10 @@ const createToken = ({ id }) => {
 }
 
 const verifyToken = async (req, res, next) => {
-    if (req.headers.cookie) {
-        const token = req.headers.cookie.split("=")[1]
+    if (req.headers.authorization) {
+        console.log(req.headers.authorization, 'author here');
+        // return
+        const token = req.headers.authorization
         const id = jwt.verify(token, config.AUTH_SECRET)
         const user = await knex("users").where({ id })
         req.userData = user

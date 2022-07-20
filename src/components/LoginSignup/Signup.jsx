@@ -12,7 +12,7 @@ export default function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:4000/register', {
+        axios.post('/register', {
             name: userData.name,
             email: userData.email,
             password: userData.password

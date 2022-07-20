@@ -38,8 +38,8 @@ router.post('/login', async (req, res) => {
         // if credentials matched
         if (user.length !== 0) {
             const token = createToken(user[0])          // generating token using jsonwebtoken
-            res.cookie('cookie', token)                 // saving token in headers
-            return res.send('logged in')
+            // res.cookie('cookie', token) 
+            return res.status(200).json({'cookie':token})                // saving token in headers
         }
         res.send('check your credentials and try again')
         

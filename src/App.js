@@ -3,7 +3,8 @@
 // import Topbar from "./components/topbar/Topbar.jsx";
 // import Card from "./components/cards/Card.jsx";
 
-import Login from "./components/LoginSignup/Login.jsx";
+import Post from "./components/BlogPost/Post.jsx";
+// import Login from "./components/LoginSignup/Login.jsx";
 import BlogStat from "./context/Blog/BlogState.js";
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
       {/* <Home /> */}
       {/* <Card /> */}
       {/* <Signup /> */}
+      {/* <Login /> */}
+      <Post />
     </BlogStat>
-      <Login />
     </>
   );
 }

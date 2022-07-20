@@ -7,15 +7,20 @@ export default function Login() {
         password: ""
     })
 
-    console.log("i am working")
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:4000/login', {
+        console.log("i am working")
+        axios.post('/login', {
             email: userData.email,
             password: userData.password
+        }, {
+            headers: {
+                'Content-Type': 'application/json'
+              }
         })
             .then(res => {
-                console.log('login success', res);
+                console.log('login success')
+                localStorage.setItem('authToken', res.data.cookie)
                 setUserData({
                     email: '',
                     password: ''
@@ -45,7 +50,7 @@ export default function Login() {
                     </div><br />
                 </div>
                 <div className="input-btn">
-                    <input type="submit" onSubmit={handleSubmit} />
+                    <input type="submit" onClick={handleSubmit} />
                 </div>
 
             </form>
